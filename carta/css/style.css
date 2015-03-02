@@ -1,0 +1,2026 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.container:after, #leasing:after, #leasing #leasing-login form:after, .bar .image-cropper:after, .bar-type-1 .container:after, .bar-type-1 .section:after, .bar-type-3:after, #car-shared-leasing:after, #car-shared-leasing #car-shared-leasing-calculator #percentages:after, #contact .staffgroup:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+@font-face {
+    font-family: 'Clio XS';
+    src: url("../fonts/clioxslight.eot");
+    src: url("../fonts/clioxslight.eot?#iefix") format("embedded-opentype"), url("../fonts/clioxslight.woff") format("woff"), url("../fonts/clioxslight.ttf") format("truetype"), url("../fonts/clioxslight.svg") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Clio XS';
+    src: url("../fonts/clioxsbold.eot");
+    src: url("../fonts/clioxsbold.eot?#iefix") format("embedded-opentype"), url("../fonts/clioxsbold.woff") format("woff"), url("../fonts/clioxsbold.ttf") format("truetype"), url("../fonts/clioxsbold.svg") format("svg");
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Clio XS';
+    src: url("../fonts/clioxslightitalic.eot");
+    src: url("../fonts/clioxslightitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/clioxslightitalic.woff") format("woff"), url("../fonts/clioxslightitalic.ttf") format("truetype"), url("../fonts/clioxslightitalic.svg") format("svg");
+    font-weight: normal;
+    font-style: italic
+}
+
+@font-face {
+    font-family: 'Clio XS';
+    src: url("../fonts/clioxsbolditalic.eot");
+    src: url("../fonts/clioxsbolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/clioxsbolditalic.woff") format("woff"), url("../fonts/clioxsbolditalic.ttf") format("truetype"), url("../fonts/clioxsbolditalic.svg") format("svg");
+    font-weight: bold;
+    font-style: italic
+}
+
+body {
+    background: #344A57;
+    color: #000;
+    font-size: 14px;
+    font-family: "Clio XS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased
+}
+
+img {
+    display: block
+}
+
+a {
+    text-decoration: none
+}
+
+strong {
+    font-weight: bold
+}
+
+em {
+    font-style: italic
+}
+
+h2, h3, h4 {
+    font-style: italic;
+    font-weight: bold
+}
+
+h2 {
+    font-size: 2.14286em
+}
+
+h3, h4 {
+    line-height: 1.57143
+}
+
+#page {
+    min-width: 1024px
+}
+
+.container {
+    max-width: 1220px;
+    min-width: 1024px;
+    padding: 0 40px 0;
+    margin: 0 auto
+}
+
+#content {
+    margin-top: -40px
+}
+
+footer {
+    color: #fff;
+    padding: 66px 0;
+    background: #344A57;
+    line-height: 1.57143em
+}
+
+footer h3 {
+    color: #fff;
+    font-style: normal;
+    font-size: 1.42857em;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    padding: 0 0 22px
+}
+
+footer h4 {
+    color: #B2C2CC
+}
+
+footer p {
+    padding: 0 0 22px
+}
+
+footer a {
+    color: #fff;
+    font-weight: bold
+}
+
+footer a:hover {
+    color: #B2C2CC
+}
+
+footer .column {
+    width: 31.31579%;
+    float: left
+}
+
+footer .column.column-1, footer .column.column-2 {
+    margin-right: 2.7193%
+}
+
+.page-template-login-php footer {
+    display: none
+}
+
+.page-template-login-php .forgot-password {
+    line-height: 1.57143em
+}
+
+.page-template-login-php .forgot-password a {
+    color: #fff
+}
+
+#leasing {
+    padding: 88px 0;
+    margin: 0 auto
+}
+
+#leasing h2 {
+    width: 31.57895%;
+    float: left;
+    text-align: right;
+    color: #fff;
+    margin-right: 2.63158%
+}
+
+#leasing #leasing-login {
+    width: 31.57895%;
+    float: left;
+    color: #fff
+}
+
+#leasing #leasing-login form p.login-username, #leasing #leasing-login form p.login-password {
+    margin: 0 0 22px
+}
+
+#leasing #leasing-login form p.login-remember {
+    width: 50%;
+    float: left;
+    padding: 10px 0
+}
+
+#leasing #leasing-login form p.login-submit {
+    width: 50%;
+    float: right
+}
+
+#leasing #leasing-login form p.login-submit .button-primary {
+    background: #B2C2CC;
+    background: rgba(178, 194, 204, 0.8);
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #344A57;
+    font-weight: bold;
+    float: right
+}
+
+#leasing #leasing-login form label {
+    display: block;
+    line-height: 1.57143em
+}
+
+#leasing #leasing-login form input {
+    padding: 10px;
+    border: none
+}
+
+#leasing #leasing-login form input.input {
+    width: 100%
+}
+
+.menu {
+    font-weight: bold
+}
+
+.menu .sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 30
+}
+
+.menu li a {
+    display: block;
+    padding: 0 30px
+}
+
+.menu .menu-item-has-children {
+    position: relative
+}
+
+.menu#topmenu {
+    font-size: 0.85714em;
+    background: #344A57;
+    color: #fff
+}
+
+.menu#topmenu a {
+    color: #fff;
+    line-height: 5em
+}
+
+.menu#topmenu .sub-menu {
+    width: 100%;
+    background: #344A57;
+    background: rgba(52, 74, 87, 0.8)
+}
+
+.menu#topmenu .sub-menu a:hover {
+    text-decoration: underline
+}
+
+.menu#topmenu ul#menu-topmenu {
+    float: right
+}
+
+.menu#topmenu ul#menu-topmenu li {
+    display: block
+}
+
+.menu#topmenu ul#menu-topmenu > li.current-menu-parent > a {
+    background: url("../img/lightborder.jpg") repeat-x bottom
+}
+
+.menu#topmenu ul#menu-topmenu > li > a {
+    text-transform: uppercase
+}
+
+.menu#topmenu ul#menu-topmenu > li > a:hover {
+    cursor: pointer;
+    background: url("../img/lightborder.jpg") repeat-x bottom
+}
+
+.menu#topmenu ul#menu-topmenu .triangle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 20px 0 20px;
+    border-color: #B2C2CC transparent transparent transparent
+}
+
+.menu#topmenu ul#menu-topmenu li.menu-item-has-children.active > a {
+    background: url("../img/lightborder.jpg") repeat-x bottom
+}
+
+.menu#topmenu ul#menu-topmenu li.menu-item-has-children.active .sub-menu {
+    display: block
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu#topmenu ul#menu-topmenu li.menu-item-has-children:hover > a {
+        background: url("../img/lightborder.jpg") repeat-x bottom
+    }
+
+    .menu#topmenu ul#menu-topmenu li.menu-item-has-children:hover .sub-menu {
+        display: block
+    }
+}
+
+.menu#mainmenu {
+    font-size: 0.85714em;
+    background: #fff;
+    color: #000;
+    position: relative;
+    z-index: 4;
+    width: 100%
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu#mainmenu.floating {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 1px 10px 0 #000
+    }
+
+    body.admin-bar .menu#mainmenu.floating {
+        top: 32px
+    }
+}
+
+.menu#mainmenu #logo {
+    padding: 20px 0 0;
+    float: left;
+    width: 172px
+}
+
+.menu#mainmenu #logo img {
+    max-width: 100%
+}
+
+.menu#mainmenu a {
+    color: #333
+}
+
+.menu#mainmenu .sub-menu {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.8)
+}
+
+.menu#mainmenu .sub-menu .headline {
+    text-transform: uppercase
+}
+
+.menu#mainmenu .sub-menu .headline a {
+    color: #344A57
+}
+
+.menu#mainmenu .sub-menu .headline a:hover {
+    text-decoration: none
+}
+
+.menu#mainmenu .sub-menu a:hover {
+    text-decoration: underline
+}
+
+.menu#mainmenu ul#menu-hovedmenu {
+    float: right
+}
+
+.menu#mainmenu ul#menu-hovedmenu > li {
+    float: left
+}
+
+.menu#mainmenu ul#menu-hovedmenu > li.current-menu-item > a, .menu#mainmenu ul#menu-hovedmenu > li.current-menu-parent > a {
+    background: url("../img/darkborder.jpg") repeat-x bottom
+}
+
+.menu#mainmenu ul#menu-hovedmenu > li > a {
+    line-height: 7.5em
+}
+
+.menu#mainmenu ul#menu-hovedmenu > li > a:hover {
+    cursor: pointer;
+    background: url("../img/darkborder.jpg") repeat-x bottom
+}
+
+.menu#mainmenu ul#menu-hovedmenu .sub-menu {
+    padding: 20px 10px 30px
+}
+
+.menu#mainmenu ul#menu-hovedmenu .sub-menu .headline {
+    padding: 10px 0 0
+}
+
+.menu#mainmenu ul#menu-hovedmenu .sub-menu .current-menu-item a {
+    text-decoration: underline
+}
+
+.menu#mainmenu ul#menu-hovedmenu .sub-menu a {
+    line-height: 1.66667em
+}
+
+.menu#mainmenu ul#menu-hovedmenu li.menu-item-has-children.active .triangle {
+    display: block
+}
+
+.menu#mainmenu ul#menu-hovedmenu li.menu-item-has-children.active > a {
+    background: url("../img/darkborder.jpg") repeat-x bottom
+}
+
+.menu#mainmenu ul#menu-hovedmenu li.menu-item-has-children.active .sub-menu {
+    display: block
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu#mainmenu ul#menu-hovedmenu li.menu-item-has-children:hover .triangle {
+        display: block
+    }
+
+    .menu#mainmenu ul#menu-hovedmenu li.menu-item-has-children:hover > a {
+        background: url("../img/darkborder.jpg") repeat-x bottom
+    }
+
+    .menu#mainmenu ul#menu-hovedmenu li.menu-item-has-children:hover .sub-menu {
+        display: block
+    }
+}
+
+.menu#mainmenu ul#menu-hovedmenu .triangle {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20px;
+    margin-bottom: -10px;
+    z-index: 40;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 20px 0 20px;
+    border-color: #344A57 transparent transparent transparent
+}
+
+#banner {
+    height: 540px;
+    position: relative
+}
+
+#banner #banner-nav {
+    position: absolute;
+    text-align: center;
+    bottom: 60px;
+    z-index: 10;
+    width: 100%
+}
+
+#banner #banner-nav li {
+    display: inline-block;
+    padding: 0 5px
+}
+
+#banner #banner-nav li a {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-clip: padding-box;
+    cursor: pointer;
+    background: #B2C2CC
+}
+
+#banner #banner-nav li.active a {
+    cursor: default;
+    background: #344A57
+}
+
+#banner .slide {
+    display: none;
+    top: 0;
+    position: absolute;
+    z-index: 3;
+    height: 540px;
+    width: 100%;
+    overflow: hidden
+}
+
+#banner .slide img {
+    position: absolute;
+    z-index: 1
+}
+
+#banner .slide .container {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 50%;
+    height: 100%
+}
+
+#banner .slide .textbox {
+    bottom: 180px
+}
+
+.textbox {
+    position: absolute;
+    color: #fff;
+    background: #344A57;
+    background: rgba(52, 74, 87, 0.8);
+    font-size: 2.85714em;
+    font-style: italic;
+    font-weight: bold;
+    position: absolute;
+    bottom: 120px
+}
+
+.textbox.right {
+    right: 40px;
+    text-align: right
+}
+
+.textbox p {
+    width: 450px;
+    padding: 20px
+}
+
+.textbox p span {
+    display: block;
+    font-size: 0.4em;
+    line-height: 1.375em;
+    font-weight: normal
+}
+
+#headline {
+    display: none;
+    background: #fff;
+    position: relative
+}
+
+#headline h1 {
+    font-size: 2.85714em;
+    font-weight: bold;
+    color: #344A57;
+    line-height: 2em;
+    text-align: center
+}
+
+#headline .triangle {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    bottom: 0;
+    margin-bottom: -40px;
+    z-index: 10;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 60px 0 60px;
+    border-color: #fff transparent transparent transparent;
+    border-color: #fff rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+}
+
+.bar {
+    position: relative
+}
+
+.bar.last-bar .triangle {
+    display: none
+}
+
+.bar.last-bar .image-cropper {
+    display: none
+}
+
+.bar .triangle {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    bottom: 0;
+    margin-bottom: -40px;
+    z-index: 10;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 60px 0 60px
+}
+
+.bar .image-cropper {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    z-index: 50;
+    width: 100%
+}
+
+.bar .image-cropper .image-cropper-bar {
+    height: 40px;
+    float: left
+}
+
+.bar .image-cropper .image-cropper-triangle {
+    float: left;
+    width: 0;
+    height: 0;
+    border-style: solid
+}
+
+.bar .image-cropper .image-cropper-left-triangle {
+    border-width: 40px 0 0 60px
+}
+
+.bar .image-cropper .image-cropper-right-triangle {
+    border-width: 0 0 40px 60px
+}
+
+.bar.colortheme-white {
+    background: #fff;
+    color: #000
+}
+
+.bar.colortheme-white a {
+    color: #344A57
+}
+
+.bar.colortheme-white a:hover {
+    color: #000
+}
+
+.bar.colortheme-white .triangle {
+    border-color: #fff transparent transparent transparent
+}
+
+.bar.colortheme-white.bar-type-4 .text {
+    background: #fff;
+    color: #B2C2CC
+}
+
+.bar.colortheme-white.bar-type-4 .text strong {
+    color: #344A57
+}
+
+.bar.colortheme-white.bar-type-4 .triangle {
+    border-color: #fff transparent transparent transparent
+}
+
+.bar.colortheme-light {
+    background: #B2C2CC;
+    color: #fff
+}
+
+.bar.colortheme-light a {
+    color: #fff
+}
+
+.bar.colortheme-light a:hover {
+    color: #344A57
+}
+
+.bar.colortheme-light h3 {
+    color: #344A57
+}
+
+.bar.colortheme-light .triangle {
+    border-color: #B2C2CC transparent transparent transparent
+}
+
+.bar.colortheme-light.bar-type-1 .column {
+    color: #344A57
+}
+
+.bar.colortheme-light.bar-type-1 .column h3 {
+    color: #fff
+}
+
+.bar.colortheme-light.bar-type-3 a {
+    color: #344A57;
+    font-style: italic;
+    font-weight: bold
+}
+
+.bar.colortheme-light.bar-type-3 a:hover {
+    color: #fff
+}
+
+.bar.colortheme-light.bar-type-4 .text {
+    background: #B2C2CC;
+    background: rgba(178, 194, 204, 0.8);
+    color: #fff
+}
+
+.bar.colortheme-light.bar-type-4 .text strong {
+    color: #344A57
+}
+
+.bar.colortheme-dark {
+    background: #344A57;
+    color: #fff
+}
+
+.bar.colortheme-dark a {
+    color: #fff
+}
+
+.bar.colortheme-dark a:hover {
+    color: #B2C2CC
+}
+
+.bar.colortheme-dark .triangle {
+    border-color: #344A57 transparent transparent transparent
+}
+
+.bar.colortheme-dark.bar-type-4 .text {
+    background: #344A57;
+    background: rgba(52, 74, 87, 0.8);
+    color: #B2C2CC
+}
+
+.bar.colortheme-dark.bar-type-4 .text strong {
+    color: #fff
+}
+
+.bar.next-bar-colortheme- .image-cropper {
+    display: none
+}
+
+.bar.next-bar-colortheme-white .image-cropper-bar {
+    background: #fff
+}
+
+.bar.next-bar-colortheme-white .image-cropper-left-triangle {
+    border-color: transparent transparent transparent #fff
+}
+
+.bar.next-bar-colortheme-white .image-cropper-right-triangle {
+    border-color: transparent transparent #fff transparent
+}
+
+.bar.next-bar-colortheme-light .image-cropper-bar {
+    background: #B2C2CC
+}
+
+.bar.next-bar-colortheme-light .image-cropper-left-triangle {
+    border-color: transparent transparent transparent #B2C2CC
+}
+
+.bar.next-bar-colortheme-light .image-cropper-right-triangle {
+    border-color: transparent transparent #B2C2CC transparent
+}
+
+.bar.next-bar-colortheme-dark .image-cropper-bar {
+    background: #344A57
+}
+
+.bar.next-bar-colortheme-dark .image-cropper-left-triangle {
+    border-color: transparent transparent transparent #344A57
+}
+
+.bar.next-bar-colortheme-dark .image-cropper-right-triangle {
+    border-color: transparent transparent #344A57 transparent
+}
+
+.bar-type-1 {
+    padding: 66px 0 0
+}
+
+.bar-type-1 p {
+    line-height: 1.57143;
+    padding: 0 0 22px
+}
+
+.bar-type-1 li {
+    line-height: 1.57143;
+    background: url("../img/li-arrow.png") left 7px no-repeat;
+    padding: 0 0 0 10px
+}
+
+.bar-type-1 .title {
+    width: 31.57895%;
+    float: left
+}
+
+.bar-type-1 .title h2 {
+    text-align: right
+}
+
+.bar-type-1 .title .image {
+    padding: 40px 0 0
+}
+
+.bar-type-1 .title .image img {
+    margin: 0 auto
+}
+
+.bar-type-1 .text {
+    width: 65.78947%;
+    float: right
+}
+
+.bar-type-1 .section {
+    padding: 0 0 66px
+}
+
+.bar-type-1 .section.no-of-columns-2 .column {
+    width: 48%
+}
+
+.bar-type-1 .section.no-of-columns-2 .column img {
+    max-width: 100%
+}
+
+.bar-type-1 .section.no-of-columns-2 .column img.aligncenter {
+    margin: 0 auto
+}
+
+.bar-type-1 .section.no-of-columns-2 .column img.alignright {
+    float: right;
+    margin: 0 0 20px 20px
+}
+
+.bar-type-1 .section.no-of-columns-2 .column img.alignleft {
+    float: left;
+    margin: 0 20px 20px 0
+}
+
+.bar-type-1 .section.no-of-columns-2 .column ul {
+    padding: 0 0 22px
+}
+
+.bar-type-1 .section.no-of-columns-2 .column-1 {
+    float: left
+}
+
+.bar-type-1 .section.no-of-columns-2 .column-2 {
+    float: right
+}
+
+.bar-type-2 {
+    height: 500px;
+    position: relative
+}
+
+.bar-type-2 .container {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 50%;
+    height: 100%
+}
+
+.bar-type-2.bar-below {
+    height: 540px
+}
+
+.bar-type-3 {
+    padding: 66px 0
+}
+
+.bar-type-3 .entry {
+    text-align: center;
+    width: 33%;
+    padding: 0 20px;
+    float: left
+}
+
+.bar-type-3 .entry .icon {
+    width: 100px;
+    margin: 0 auto 22px
+}
+
+.bar-type-3 .entry a {
+    display: block
+}
+
+.bar-type-3 .entry p {
+    padding: 0 0 22px
+}
+
+.bar-type-3 .entry p, .bar-type-3 .entry a {
+    line-height: 1.57143em
+}
+
+.bar-type-3 h3 {
+    font-size: 1.28571em;
+    font-style: normal;
+    color: #344A57;
+    text-transform: uppercase
+}
+
+.bar-type-4 {
+    height: 250px;
+    position: relative
+}
+
+.bar-type-4 .image-container {
+    position: relative;
+    z-index: 1;
+    height: 250px
+}
+
+.bar-type-4 .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2
+}
+
+.bar-type-4 .text p {
+    line-height: 1.2
+}
+
+.bar-type-4 .text .container {
+    display: table;
+    position: relative;
+    height: 100%
+}
+
+.bar-type-4 .text .text-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.78571em;
+    font-weight: bold;
+    padding: 0 200px;
+    font-style: italic
+}
+
+.bar-type-4 .text .text-inner strong {
+    font-style: normal
+}
+
+.bar-type-4.backgroundtype-image.bar-below {
+    height: 290px
+}
+
+.bar-type-4.backgroundtype-image.bar-below .image-container {
+    height: 290px
+}
+
+.bar-type-4.backgroundtype-image.bar-below .image-container img {
+    visibility: hidden
+}
+
+.bar-type-5 {
+    padding: 66px 0
+}
+
+.bar-type-5 h2 {
+    float: left;
+    width: 31.57895%;
+    text-align: right
+}
+
+.bar-type-5 h2 span {
+    display: block;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 0.4em
+}
+
+#car-shared-leasing {
+    visibility: hidden;
+    position: relative
+}
+
+#car-shared-leasing #car-shared-leasing-slider {
+    width: 65.78947%;
+    position: absolute;
+    top: 27%;
+    float: left
+}
+
+#car-shared-leasing #car-shared-leasing-slider #car-shared-leasing-slider-car {
+    position: relative
+}
+
+#car-shared-leasing #car-shared-leasing-slider img {
+    max-width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#car-shared-leasing #car-shared-leasing-slider #dragger {
+    position: absolute;
+    height: 100%;
+    background: transparent;
+    border-right: 2px solid #B2C2CC;
+    z-index: 80
+}
+
+#car-shared-leasing #car-shared-leasing-slider #dragger #dragger-arrow {
+    cursor: pointer;
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    right: -29px;
+    top: 50%;
+    margin-top: -29px;
+    background: url("../img/dragger-arrow.png") no-repeat center center
+}
+
+#car-shared-leasing #car-shared-leasing-slider #dragger #dragger-label {
+    margin-left: -100px;
+    line-height: 30px;
+    top: 50%;
+    position: absolute;
+    margin-top: -15px;
+    display: inline-block;
+    color: #fff;
+    background: #344A57;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-style: italic
+}
+
+#car-shared-leasing #car-shared-leasing-slider #dragger #dragger-label span {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #344A57
+}
+
+#car-shared-leasing #car-shared-leasing-slider #car-private {
+    width: 100%;
+    height: 100%;
+    position: absolute
+}
+
+#car-shared-leasing #car-shared-leasing-slider #car-business {
+    height: 100%;
+    position: absolute
+}
+
+#car-shared-leasing #car-shared-leasing-slider #car-business-mask {
+    height: 100%;
+    position: absolute;
+    overflow: hidden
+}
+
+#car-shared-leasing #car-shared-leasing-slider-description {
+    float: left;
+    clear: left;
+    color: #344A57;
+    padding: 22px 0 0 7%
+}
+
+#car-shared-leasing #car-shared-leasing-calculator {
+    float: right;
+    width: 31.57895%;
+    color: #344A57
+}
+
+#car-shared-leasing #car-shared-leasing-calculator #percentages {
+    font-size: 1.42857142857143em;
+    text-transform: uppercase;
+    padding: 0 0 22px
+}
+
+#car-shared-leasing #car-shared-leasing-calculator #percentages b {
+    font-size: 2.5em;
+    font-weight: bold;
+    font-style: italic
+}
+
+#car-shared-leasing #car-shared-leasing-calculator #percentages div {
+    width: 50%;
+    text-align: center
+}
+
+#car-shared-leasing #car-shared-leasing-calculator #percentages #percentage-business {
+    float: left
+}
+
+#car-shared-leasing #car-shared-leasing-calculator #percentages #percentage-private {
+    float: right
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table td, #car-shared-leasing #car-shared-leasing-calculator table th {
+    padding: 10px 5px
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table td.number, #car-shared-leasing #car-shared-leasing-calculator table th.number {
+    text-align: right
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table tbody td {
+    width: 33%;
+    line-height: 1.57143em
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table thead {
+    font-weight: bold
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table thead th {
+    border-bottom: 3px solid #B2C2CC
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table tfoot {
+    font-weight: bold
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table td {
+    border-bottom: 2px solid #B2C2CC
+}
+
+#car-shared-leasing #car-shared-leasing-calculator table td span {
+    font-size: 0.8em;
+    display: block
+}
+
+#car-shared-leasing #car-shared-leasing-calculator #disclaimer {
+    padding: 5px;
+    border-top: 4px solid #B2C2CC;
+    font-size: 0.85714em;
+    text-align: right
+}
+
+#contact {
+    padding: 40px 0 0;
+    background: #B2C2CC
+}
+
+#contact h2 {
+    width: 31.57895%;
+    text-align: right;
+    padding: 0 0 44px;
+    color: #fff
+}
+
+#contact #contacts {
+    padding: 66px 0 22px
+}
+
+#contact #contacts h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-style: normal
+}
+
+#contact #contacts h3 span {
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    text-transform: none
+}
+
+#contact #contact-map {
+    background: url("../img/contactmap.png") no-repeat;
+    background-size: cover;
+    height: 500px
+}
+
+#contact .staffgroup {
+    color: #344A57;
+    padding: 0 0 22px
+}
+
+#contact .staffgroup .headline {
+    width: 31.57895%;
+    float: left;
+    text-align: right
+}
+
+#contact .staffgroup .contacts {
+    width: 65.78947%;
+    float: right
+}
+
+#contact .staffgroup .contacts .contact {
+    background: #fff;
+    width: 48%;
+    position: relative;
+    float: left;
+    margin: 0 0 22px 0
+}
+
+#contact .staffgroup .contacts .contact a {
+    color: #344A57
+}
+
+#contact .staffgroup .contacts .contact a img {
+    display: none
+}
+
+#contact .staffgroup .contacts .contact a:hover span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #344A57;
+    background: rgba(52, 74, 87, 0.8);
+    top: 0;
+    left: 0
+}
+
+#contact .staffgroup .contacts .contact a:hover span img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25.5px;
+    margin-left: -24.5px
+}
+
+#contact .staffgroup .contacts .contact.uneven {
+    margin-right: 4%
+}
+
+#contact .staffgroup .contacts .contact .contact-image {
+    width: 45.83333%;
+    height: 200px;
+    float: left;
+    overflow: hidden
+}
+
+#contact .staffgroup .contacts .contact .contact-image img {
+    visibility: hidden
+}
+
+#contact .staffgroup .contacts .contact .contact-data {
+    padding: 22px 0;
+    width: 45.83333%;
+    float: right;
+    line-height: 1.57143em
+}
+
+#contact .staffgroup .contacts .contact .contact-title {
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.page-template-beregner-php #content {
+    background: #fff
+}
+
+.page-template-beregner-php #mainmenu.floating {
+    position: relative;
+    top: auto
+}
+
+.page-template-beregner-php footer {
+    display: none
+}
+
+#beregner {
+    padding: 66px 0
+}
+
+
+
+
+
+
+.menu_simple
+{
+    text-align:left;
+    float:left;
+    display: block;
+    padding-bottom:50px;
+    width:auto;
+}
+
+.menu_simple ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.menu_simple ul li a {
+    text-align:right;
+    text-decoration: none;
+    color: slategray;
+    padding: 5.5px 11px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding-right:15px;
+}
+.menu_simple ul li a:active { color: red; }
+.menu_simple ul li a:focus { color: white; }
+
+
+.menu_simple ul li a:hover, .menu_simple ul li .current {
+
+    text-decoration: underline;
+}
+#imageGallery {
+    width:300px;
+    height:auto;
+
+}
+
+.imageZoom ul {
+    width:50px;
+    height:200px;
+    padding:0px;
+    margin:0;
+
+
+}
+.imageZoom ul li {
+    list-style: none;
+    margin:0;
+    padding:0;
+    float:left;
+    width:0;
+    height:131px;
+
+}
+.imagePreview {
+    height:auto;
+    margin:0;
+    padding:0;
+    background: #fff;
+}
+.imagePreview ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.imagePreview ul li{
+
+    text-align: center;
+
+    margin:3px;
+    padding-left:3px;
+    display:inline-block;
+    background: #f0f0f0;
+}
+
+.imageZoom ul li img {
+
+    margin:0;
+    width:0;
+    height:0;
+    border:0;
+    overflow:hidden;
+
+}
+
+.imageZoom h2{
+    font-size: 18px;
+    color: #757E84;
+    padding:12px 0px 6px 6px;
+}
+
+
+.imageZoom ul {
+...
+background: url() 0 0 no-repeat;
+}
+
+.imageZoom ul li img {
+...
+-moz-transition: width 1s ease;
+    -webkit-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;
+    border:6px solid white;
+
+}
+
+.imageZoom ul li:target img {
+    height:auto;
+    width:300px;
+}
+
+
+
+ul#gallery-nav { list-style: none; margin-left: 0; }
+ul#gallery-nav li a { display: block; width: 65px; height: 65px;     }
+
+ul#gallery-nav li a img { border: none; position: absolute; clip: rect(0px 65px 65px 0px); height: 65px; }
+
+
+.custom-hr{
+    height:3px;
+    width: 92%;
+}
+
+.custom-hr-mid{
+    height:1px;
+    background-color:gray;
+    width: 100%;
+}
+
+.bottom-text
+{
+    padding-top:30px;
+    font-size:13px;
+    color:white;
+    line-height:150%;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.custom-tds
+{
+    color:#344A57;
+    font-weight: bold;
+    font-size:12px;
+}
+
+#wrapper-mid {
+    margin-left: 200px;
+    margin-top:50px;
+}
+#content-mid {
+    float: right;
+    width: 100%;
+    margin-top:50px;
+}
+#sidebar {
+    margin-top:50px;
+    float: left;
+    width: 200px;
+    margin-left: -200px;
+}
+#wrapper {
+    width:490px;
+}
+
+
+.custom-mid {
+    color: white;
+    font-weight: bold;
+
+}
+
+.custom-mid-h
+{
+    color:white;
+}
+
+.custom-mid-h-2
+{
+    color:white;
+    line-height:130%;
+    font-size:12px;
+    margin-top:35px;
+}
+
+
+#custom-car-shared-leasing-slider {
+    width: 45%;
+    position: absolute;
+    display:inline;
+}
+
+.number
+{
+    text-align:left;
+    padding-left:15px;
+
+}
+
+.custom-number
+{
+    padding-left:60px;
+}
+
+.custom-hr{
+    height:3px;
+    background-color:gray;
+    width: 92%;
+}
+
+
+#percentages {
+    font-size: 1.42857142857143em;
+    text-transform: uppercase;
+    padding: 0 0 22px
+}
+
+#percentage-business b {
+    font-size: 1.9em;
+    font-weight: bold;
+    font-style: italic;
+    color:#344A57;
+}
+
+
+#percentage-business p {
+    font-size:15px;
+}
+
+#percentage-private p {
+    font-size:15px;
+}
+
+#percentage-private b {
+    font-size: 1.9em;
+    font-weight: bold;
+    font-style: italic;
+    color:#344A57;
+}
+
+table th {
+    padding: 10px 5px
+}
+
+table td.number, #custom-car-shared-leasing #custom-car-shared-leasing-calculator table th.number {
+    text-align: right;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+table tbody td {
+    width: 33%;
+    line-height: 1.57143em;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+table thead {
+    font-weight: bold
+}
+
+table thead th {
+    border-bottom: 3px solid #B2C2CC
+}
+
+table tfoot {
+    font-weight: bold
+}
+
+table td {
+    line-height: 150%;
+}
+
+table td span {
+    font-size: 0.8em;
+    display: block
+}
+
+
+#custom-car-shared-leasing-slider #custom-car-shared-leasing-slider-car {
+    position: relative;
+}
+
+#custom-car-shared-leasing-slider img {
+    max-width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#custom-car-shared-leasing-slider #custom-dragger {
+    position: absolute;
+    height: 100%;
+    background: transparent;
+    border-right: 2px solid #B2C2CC;
+    z-index: 80;
+}
+
+#custom-car-shared-leasing-slider #custom-dragger #custom-dragger-arrow {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: -29px;
+    top: -10px;
+    background: url("../img/dragger-arrow.png") no-repeat center center;
+}
+
+#custom-car-shared-leasing-slider #custom-dragger #dcustom-ragger-label {
+    margin-left: -100px;
+    line-height: 30px;
+    top: 50%;
+    position: absolute;
+    margin-top: -15px;
+    display: inline-block;
+    color: #fff;
+    background: #344A57;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#custom-car-shared-leasing-slider #custom-dragger #custom-dragger-label span {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #344A57;
+}
+
+#custom-car-shared-leasing-slider #custom-car-private {
+    width: 115%;
+    height: 115%;
+    position: absolute;
+}
+
+#custom-car-shared-leasing-slider #custom-car-business {
+    height: 100%;
+    position: absolute;
+}
+
+#custom-car-shared-leasing-slider #car-business-mask {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#car-shared-leasing-slider-description {
+
+}
+
+p.tabnav a
+{
+    text-decoration: none;
+    color: #999;
+}
+
+p.tabnav a
+{
+    text-decoration: none;
+    color: #999;
+}
+
+#tabs{
+    height:50px;
+    overflow:hidden;
+}
+
+#tabs > ul{
+    font: 1em;
+    list-style:none;
+}
+
+#tabs > ul > li{
+    margin:0 0px 0 0;
+    padding:20px 10px;
+    display:block;
+    float:left;
+    width:50%;
+    color:#FFF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    text-align:center;
+    background-color:slategray;
+}
+
+#tabs > ul > li:hover{
+    background: #FFFFFF; /* old browsers */
+
+    cursor:pointer;
+    color: #333;
+}
+
+#tabs > ul > li.tabActiveHeader{
+    background: #FFFFFF; /* old browsers */
+
+    cursor:pointer;
+    color: #333;
+}
+
+#tabscontent {
+
+    padding:25px 25px 25px;
+    background: #FFFFFF; /* old browsers */
+    margin:0;
+    color:#333;
+}
+
+img {
+    border: none;
+}
+#normal2, #normal3, #normal4, #normal5 {
+    display: none;
+}
+
+#gallery {
+    margin: 0 auto;
+    width: 400px;
+}
+#thumbs {
+    margin: 10px auto 10px auto;
+    text-align: center;
+    width: 400px;
+}
+#bigimages {
+    width: 400px;
+    height:auto;
+    float: left;
+}
+#thumbs img {
+    width: 100px;
+    height: 100px;
+    border:5px solid white;
+}
+#bigimages img {
+    border: 4px solid #555;
+    width: 400px;
+    border:5px solid white;
+}
+#thumbs a:link, #thumbs a:visited {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.head-lines
+{
+    line-height:130%;
+    padding-top:5px;
+    padding-left:10px;
+    font-size:18px;
+    background-color:white;
+    margin:0px;
+}
+
+
+
+.content-table  tbody td
+{
+    padding-top:3px;
+    padding-bottom:0px;
+    color:white;
+    border-bottom:2px solid white;
+}
+div.img {
+    margin: 10px;
+    padding: 1px;
+    border: 1px solid #fff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+    background-color:#fff;
+    display: block;
+    float:left;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+
+
+div.img img {
+    display: inline;
+    margin: 1px;
+    border: 1px solid #ffffff;
+
+}
+
+div.img:hover img {
+    opacity: 0.5;
+
+}
+
+
+.img .custom-span{
+    position:relative;
+    width:100px;
+    height:110px;
+
+    float:left;
+    margin-right:5px;
+}
+.img .custom-span span{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+    color:black;
+
+}
+
+div .desc p {
+
+    font-size:18px;
+    color:#344A57;
+}
+
+
+div .desc .price {
+
+    font-size:12px;
+    color:#344A57;
+}
+#bp_sideBar{
+    height:100%;
+    display:block;
+    float:left;
+}
+
+.bp_number
+{
+    text-align:left;
+    padding-left:15px;
+
+}
+
+.custom-number
+{
+    padding-left:60px;
+}
+
+.custom-hr{
+    height:3px;
+    background-color:gray;
+    width: 92%;
+}
+
+
+#bp_percentages {
+    font-size: 1.42857142857143em;
+    text-transform: uppercase;
+    padding: 0 0 22px
+}
+
+#bp_percentage-business b {
+    font-size: 1.9em;
+    font-weight: bold;
+    font-style: italic;
+    color:#344A57;
+}
+
+
+#bp_percentage-business p {
+    font-size:15px;
+}
+
+#bp_percentage-private p {
+    font-size:15px;
+}
+
+#bp_percentage-private b {
+    font-size: 1.9em;
+    font-weight: bold;
+    font-style: italic;
+    color:#344A57;
+}
+
+table th {
+    padding: 10px 5px
+}
+
+table td.bp_number, #bp_car-shared-leasing #bp_car-shared-leasing-calculator table th.bp_number {
+    text-align: right;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+table tbody td {
+    width: 33%;
+    line-height: 1.57143em;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+table thead {
+    font-weight: bold
+}
+
+table thead th {
+    border-bottom: 3px solid #B2C2CC
+}
+
+table tfoot {
+    font-weight: bold
+}
+
+table td {
+    line-height: 150%;
+}
+
+table td span {
+    font-size: 0.8em;
+    display: block
+}
+
+
+#bp_car-shared-leasing-slider #bp_car-shared-leasing-slider-car {
+    position: relative;
+}
+
+#bp_car-shared-leasing-slider img {
+    max-width: 100%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#bp_car-shared-leasing-slider #bp_dragger {
+    position: absolute;
+    height: 100%;
+    background: transparent;
+    border-right: 2px solid #B2C2CC;
+    z-index: 80;
+}
+
+#bp_car-shared-leasing-slider #bp_dragger #bp_dragger-arrow {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: -29px;
+    top: -10px;
+    background: url("../img/dragger-arrow.png") no-repeat center center;
+}
+
+#bp_car-shared-leasing-slider #bp_dragger #bp_dragger-label {
+    margin-left: -100px;
+    line-height: 30px;
+    top: 50%;
+    position: absolute;
+    margin-top: -15px;
+    display: inline-block;
+    color: #fff;
+    background: #344A57;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#bp_car-shared-leasing-slider #bp_dragger #bp_dragger-label span {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #344A57;
+}
+
+#bp_car-shared-leasing-slider #bp_car-private {
+    width: 115%;
+    height: 115%;
+    position: absolute;
+}
+
+#bp_car-shared-leasing-slider #bp_car-business {
+    height: 100%;
+    position: absolute;
+}
+
+#bp_car-shared-leasing-slider #bp_car-business-mask {
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#bp_car-shared-leasing-slider-description {
+
+}
+
+#bp_car-shared-leasing-slider
+{
+    width:35%;
+    position:absolute;
+    display: inline;
+}
+
+.wrapper-img {
+    position: relative;
+    width: 10%; /* <-- just a default, can be anything. */
+}
+
+.three-by-two.aspect-ratio { padding-bottom: 66.666% }
+.four-by-three.aspect-ratio { padding-bottom: 75% }
+.sixteen-by-nine.aspect-ratio { padding-bottom: 56.25% }
+
+.content-img {
+    position: absolute;
+    top: 0;  bottom: 0;  left: 0;  right: 0;
+    padding: 0 24px; /* Optional padding for content area */
+}
