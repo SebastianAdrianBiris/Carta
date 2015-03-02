@@ -1,6 +1,6 @@
 <?php
 
-require'../class.upload_0.32/class.upload.php';
+require '../class.upload_0.32/class.upload.php';
 
 $cli = (isset($argc) && $argc > 1);
 if ($cli) {
@@ -17,27 +17,47 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
 
 
     if ((isset($_POST['action']) ? $_POST['action'] : (isset($_GET['action']) ? $_GET['action'] : '')) == 'multiple') {
-        $WhiteImage='white.png';
+        $WhiteImage = 'white.png';
         $date = date('m/d/Y h:i:s a', time());
-        if( $_POST['currentID']!= ""){
+        if ($_POST['currentID'] != "") {
 
-            $Cardetales= array($_POST['Brand'],$_POST['title'],$_POST['New_old'],$_POST['production'],$_POST['kilometer'],$_POST['price']
-            ,$_POST['fuel'],$_POST['colour'],$_POST['besparelse'],$_POST['korsel'],$_POST['periode'],$_POST['permonth'],$_POST['ydelse'],$_POST['beskatningsgrundlag'], $_POST['description'],$date);
+            $Cardetales = array(
+                $_POST['Brand'],
+                ucfirst($_POST['title']),
+                ucfirst($_POST['title_long']),
+                $_POST['New_old'],
+                $_POST['production'],
+                $_POST['kilometer'],
+
+                $_POST['fuel'],
+                ucfirst($_POST['colour']),
+                $_POST['besparelse'],
+                $_POST['periode'],
+                $_POST['korsel'],
+                $_POST['Ydelse_flex'],
+                $_POST['1_ydelse_flex'],
+                $_POST['beskatningsgrundlag_flex'],
+                $_POST['Ydelse_dele'],
+                $_POST['1_ydelse_dele'],
+                $_POST['driftstillæg'],
+                $_POST['beskatningsgrundlag_dele'],
+                $_POST['skat_af_fri_bil'],
+                $_POST['description'],
+                $date);
 
 
-            if($_FILES['my_field']['name'][0]=="" ){
-                array_push($Cardetales,$_POST['Image1']);
-            }if($_FILES['my_field']['name'][1]=="" ){
-                array_push($Cardetales, $_POST['Image2']);
-            }if($_FILES['my_field']['name'][2]==""){
-                array_push($Cardetales,$_POST['Image3']);
-            }if($_FILES['my_field']['name'][3]==""){
-                array_push($Cardetales,$_POST['Image4']);
+            if ($_FILES['my_field']['name'][0] == "") {
+                array_push($Cardetales, $_POST['Image1']);
             }
-
-
-
-
+            if ($_FILES['my_field']['name'][1] == "") {
+                array_push($Cardetales, $_POST['Image2']);
+            }
+            if ($_FILES['my_field']['name'][2] == "") {
+                array_push($Cardetales, $_POST['Image3']);
+            }
+            if ($_FILES['my_field']['name'][3] == "") {
+                array_push($Cardetales, $_POST['Image4']);
+            }
 
 
             $files = array();
@@ -77,13 +97,9 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
                 include($location . '../../wp-includes/post.php');
 
 
-
-
-
-
                 $post_id = $_POST['currentID'];
 
-                update_post_meta($post_id, 'cardetails', $Cardetales,false);
+                update_post_meta($post_id, 'cardetails', $Cardetales, false);
 
 
                 header('Location: http://localhost:8080/wp-admin/admin.php?page=Bil%20Opload');
@@ -92,28 +108,32 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
             }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         } else {
             /////// end og if statement
 
-            $Cardetales= array($_POST['Brand'],$_POST['title'],$_POST['New_old'],$_POST['production'],$_POST['kilometer'],$_POST['price']
-            ,$_POST['fuel'],$_POST['colour'],$_POST['besparelse'],$_POST['korsel'],$_POST['periode'],$_POST['permonth'],$_POST['ydelse'],$_POST['beskatningsgrundlag'], $_POST['description'],$date);
+            $Cardetales = array(
+                $_POST['Brand'],
+                ucfirst($_POST['title']),
+                ucfirst($_POST['title_long']),
+                $_POST['New_old'],
+                $_POST['production'],
+                $_POST['kilometer'],
 
+                $_POST['fuel'],
+                ucfirst($_POST['colour']),
+                $_POST['besparelse'],
+                $_POST['periode'],
+                $_POST['korsel'],
+                $_POST['Ydelse_flex'],
+                $_POST['1_ydelse_flex'],
+                $_POST['beskatningsgrundlag_flex'],
+                $_POST['Ydelse_dele'],
+                $_POST['1_ydelse_dele'],//15
+                $_POST['driftstillæg'],
+                $_POST['beskatningsgrundlag_dele'],
+                $_POST['skat_af_fri_bil'],
+                ucfirst($_POST['description']),
+                $date);
 
 
             $files = array();
@@ -146,25 +166,21 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
 
             }
             if ($handle->processed) {
-                if($_FILES['my_field']['name'][0]=="" )
-                {
-                    array_push($Cardetales,$WhiteImage);
+                if ($_FILES['my_field']['name'][0] == "") {
+                    array_push($Cardetales, $WhiteImage);
 
                 }
-                if($_FILES['my_field']['name'][1]=="" )
-                {
-                    array_push($Cardetales,$WhiteImage);
+                if ($_FILES['my_field']['name'][1] == "") {
+                    array_push($Cardetales, $WhiteImage);
 
                 }
-                if($_FILES['my_field']['name'][2]=="" )
-                {
-                    array_push($Cardetales,$WhiteImage);
+                if ($_FILES['my_field']['name'][2] == "") {
+                    array_push($Cardetales, $WhiteImage);
 
                 }
 
-                if($_FILES['my_field']['name'][3]=="" )
-                {
-                    array_push($Cardetales,$WhiteImage);
+                if ($_FILES['my_field']['name'][3] == "") {
+                    array_push($Cardetales, $WhiteImage);
 
                 }
                 global $user_ID;
@@ -209,9 +225,6 @@ if (!$cli && !(isset($_SERVER['HTTP_X_FILE_NAME']) && isset($_SERVER['CONTENT_LE
         echo '</p>';
 
     }
-
-
-
 
 
 }

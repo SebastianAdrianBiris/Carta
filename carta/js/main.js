@@ -69,7 +69,7 @@ function calculateImageCroppers() {
 }(jQuery);
 var timeOut;
 jQuery(document).ready(function () {
-    $(".bar-type-2").stretchImage(!0), $(".bar-type-4 .image-container").stretchImage(!0), $(".slide").stretchImage(), $(".contact-image").stretchImage(!0), $("#menu-topmenu .sub-menu").append('<span class="triangle"></span>'), $("#menu-hovedmenu .menu-item-has-children").append('<span class="triangle"></span>'), $("#car-shared-leasing").carSharedLeasing(), $("#bp_car-shared-leasing").carSharedLeasing2() , $("#banner-nav a").click(function () {
+    $(".bar-type-2").stretchImage(!0), $(".bar-type-4 .image-container").stretchImage(!0), $(".slide").stretchImage(), $(".contact-image").stretchImage(!0), $("#menu-topmenu .sub-menu").append('<span class="triangle"></span>'), $("#menu-hovedmenu .menu-item-has-children").append('<span class="triangle"></span>'), $("#car-shared-leasing").carSharedLeasing(), $("#banner-nav a").click(function () {
         $(this).parent().hasClass("active") || $("#banner").hasClass("fading") || slider($(this).parent().data("slideNo"))
     }), $(".bar").each(function () {
         var e = $(this), t = $(this).next();
@@ -103,7 +103,7 @@ jQuery(document).ready(function () {
 });
 
 (jQuery), function ($) {
-    $.fn.carSharedLeasing2 = function () {
+    $.fn.carSharedLeasing2 = function (fym, dym, drtm, tot, skat, besp) {
         function e(e) {
             e += "";
             for (var t = e.split("."), i = t[0], n = t.length > 1 ? "," + t[1] : "", a = /(\d+)(\d{3})/; a.test(i);)i = i.replace(a, "$1.$2");
@@ -111,7 +111,7 @@ jQuery(document).ready(function () {
         }
 
         function t(t) {
-            var i = 496764, n = 190544, s = 160169;
+            var i = tot, n = skat, s = besp;
             $("#bp_percentage-business b").text(t + "%"),
                 $("#bp_percentage-private b").text(a - t + "%"),
                 b.text(e(Math.round(t / a * r * .8))),
@@ -123,6 +123,13 @@ jQuery(document).ready(function () {
                 I.text(e(Math.round((a - t) / a * i))),
                 M.text(e(Math.round(n - (a - t) / a * i))),
                 H.text(e(Math.round(s)))
+
+
+        }
+
+        function setstuff() {
+            var e = g.outerWidth(), t = e / g.outerHeight(), i = e / t;
+            p.css({height: i}), f.css({width: v.outerWidth()}), u.css({width: v.outerWidth() * (s / a)}), c.css({width: v.outerWidth() * (s / a)})
         }
 
         function i() {
@@ -130,7 +137,29 @@ jQuery(document).ready(function () {
             p.css({height: i}), f.css({width: v.outerWidth()}), u.css({width: v.outerWidth() * (s / a)}), c.css({width: v.outerWidth() * (s / a)})
         }
 
-        var n = this, a = 100, s = 80, r = 7615.5, o = 3753.5, d = 87500, c = n.find("#bp_dragger"), l = c.find("#bp_dragger-arrow"), h = c.find("#bp_dragger-label"), u = n.find("#bp_car-business-mask"), f = u.find("#bp_car-business"), m = n.find("#bp_car-private"), g = m.find("img"), v = n.find("#bp_car-shared-leasing-slider"), p = v.find("#bp_car-shared-leasing-slider-car"), b = n.find("#bp_monthly-payment-business"), w = n.find("#bp_monthly-payment-private"), C = n.find("#bp_work-allowance-business"), x = n.find("#bp_work-allowance-private"), y = n.find("#bp_first-payment-business"), W = n.find("#bp_first-payment-private"), I = n.find("#bp_savings-business"), M = n.find("#bp_savings-private"), H = n.find("#bp_relative-total-savings");
+        var n = this, a = 100, s = 80, r = dym, o = drtm, d = fym,
+            c = n.find("#bp_dragger"),
+            l = c.find("#bp_dragger-arrow"),
+            h = c.find("#bp_dragger-label"),
+            u = n.find("#bp_car-business-mask"),
+            f = u.find("#bp_car-business"),
+            m = n.find("#bp_car-private"),
+            g = m.find("img"),
+            v = n.find("#bp_car-shared-leasing-slider"),
+            p = v.find("#bp_car-shared-leasing-slider-car"),
+            b = n.find("#bp_monthly-payment-business"),
+            w = n.find("#bp_monthly-payment-private"),
+            C = n.find("#bp_work-allowance-business"),
+            x = n.find("#bp_work-allowance-private"),
+            y = n.find("#bp_first-payment-business"),
+            W = n.find("#bp_first-payment-private"),
+            I = n.find("#bp_savings-business"),
+            M = n.find("#bp_savings-private"),
+            H = n.find("#bp_relative-total-savings");
+
+
+        u.css({width: 80 + "%"});
+        c.css({width: 80 + "%"});
         return t(s), l.on("mousedown", function (e) {
             var i = e.pageX, n = 0, a = 0, s = v.outerWidth(), r = c.outerWidth(), o = r, d = o / s * 100;
             h.fadeOut(), v.on("mousemove", function (e) {
@@ -139,59 +168,116 @@ jQuery(document).ready(function () {
         }), $(document).on("mouseup", function () {
             $("#bp_car-shared-leasing-slider").unbind("mousemove"), h.fadeIn()
         }), $(window).bind("load", function () {
+
             i(), n.css({visibility: "visible"}).hide().fadeIn()
         }), $(window).bind("resize", function () {
             i()
         }), this
     }
+
 }(jQuery);
 jQuery(document).ready(function () {
 
 
     var param = document.URL.split('=')[1];
-    get(param)
+    get(param);
+
+
 });
-    function get(param){
-        $.post("../wp-content/plugins/biler/getbyid.php",
-            {
-                name: param
+function get(param) {
+    $.post("../wp-content/plugins/biler/getbyid.php",
+        {
+            name: param
 
-            },
-            function(data, status){
-                var cardeatails = JSON.parse(data);
-                var img = cardeatails[1];
-
-                document.getElementById("year").innerHTML = cardeatails[2];
-                document.getElementById("km").innerHTML = cardeatails[4];
-                document.getElementById("bp_description").innerHTML = cardeatails[14];
-                document.getElementById("color").innerHTML = cardeatails[7];
-                document.getElementById("fuel").innerHTML = cardeatails[6];
-                document.getElementById("image1").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[16];
-                document.getElementById("image2").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[17];
-                document.getElementById("image3").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[18];
-                document.getElementById("image4").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[19];
-                document.getElementById("image11").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[16];
-                document.getElementById("image12").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[17];
-                document.getElementById("image13").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[18];
-                document.getElementById("image14").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[19];
-                document.getElementById("bp_relative-total-savings").innerHTML =  addCommas(cardeatails[8]) ;
-                document.getElementById("kørsel").innerHTML = addCommas(cardeatails[9])+" km/årligt";
-                document.getElementById("period").innerHTML =  cardeatails[10]+" mdr";
-                document.getElementById("permonth").innerHTML =  addCommas(cardeatails[11])+" kr./måned";
-                document.getElementById("ydelse").innerHTML = "kr. "+addCommas(cardeatails[12])+",-";
-                document.getElementById("kørsel2").innerHTML = addCommas(cardeatails[9])+" km";
-                document.getElementById("period2").innerHTML =  cardeatails[10];
-                document.getElementById("beskat").innerHTML =  "kr. "+addCommas(cardeatails[13])+",-";
+        },
+        function (data, status) {
+            var cardeatails = JSON.parse(data);
 
 
-
-
-            });
-            function addCommas(n){
-                return String(n).split("").reverse().join("")
-                    .replace(/(.{3}\B)/g, "$1.")
-                    .split("").reverse().join("");
+            document.getElementById("year").innerHTML = cardeatails[4];
+            document.getElementById("km").innerHTML = cardeatails[5];
+            document.getElementById("bp_description").innerHTML = cardeatails[19];
+            document.getElementById("fuel").innerHTML = cardeatails[6];
+            document.getElementById("color").innerHTML = cardeatails[7];
+            document.getElementById("image1").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[21];
+            document.getElementById("image2").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[22];
+            document.getElementById("image3").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[23];
+            document.getElementById("image4").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[24];
+            document.getElementById("image11").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[21];
+            document.getElementById("image12").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[22];
+            document.getElementById("image13").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[23];
+            document.getElementById("image14").src = "../wp-content/plugins/biler/includes/test/" + cardeatails[24];
+            //document.getElementById("bp_relative-total-savings").innerHTML =  addCommas(cardeatails[8]) ;
+            document.getElementById("kørsel").innerHTML = addCommas(cardeatails[10]) + " km/årligt";
+            document.getElementById("period").innerHTML = cardeatails[9] + " mdr";
+            if (cardeatails[11] != null) {
+                document.getElementById("Ydelse_flex").innerHTML = addCommas(cardeatails[11]) + " kr./mdr";
+                document.getElementById("1_ydelse_flex").innerHTML = "kr. " + addCommas(cardeatails[12]) + ",-";
+                document.getElementById("beskatningsgrundlag_flex").innerHTML = "kr. " + addCommas(cardeatails[13]) + ",-";
+            } else {
+                document.getElementById("Ydelse_flex").innerHTML = addCommas(0) + " kr./mdr";
+                document.getElementById("1_ydelse_flex").innerHTML = "kr. " + addCommas(0) + ",-";
+                document.getElementById("beskatningsgrundlag_flex").innerHTML = "kr. " + addCommas(0) + ",-";
             }
-    };
+            document.getElementById("kørsel2").innerHTML = addCommas(cardeatails[10]) + " km";
+            document.getElementById("period2").innerHTML = cardeatails[9];
+
+            document.getElementById("bp_title").innerHTML = cardeatails[2];
+            bla($);
+            if (cardeatails[15] != null) {
+                var fy = cardeatails[15];
+                var mdr = cardeatails[9];
+                var fym = cardeatails[15] * 1.25; //d
+                var dym = cardeatails[14] * 1.25; //r
+                var drtm = cardeatails[16] * 1.25; //o
+                var lyfortime = cardeatails[14] * mdr;
+                var drift = cardeatails[16] * mdr;
+                var tot = +fy + +lyfortime + +drift;
+                tot = tot * 1.25; //i
+                var skat = cardeatails[18]; //n
+                var besp = +tot - 30375 + +cardeatails[18];
+                var besp = besp - tot; //s
+            }else {
+            var fym = 0; //d
+            var dym = 0; //r
+            var drtm = 0; //o
+            var tot = 0;
+            var skat = 0; //n
+            var besp = 0; //s
+            }
+            $("#bp_car-shared-leasing").carSharedLeasing2(fym, dym, drtm, tot, skat, besp);
+        });
+    function addCommas(n) {
+        return String(n).split("").reverse().join("")
+            .replace(/(.{3}\B)/g, "$1.")
+            .split("").reverse().join("");
+    }
+};
+
+function bla($) {
+
+    var addToAll = false;
+    var gallery = true;
+    var titlePosition = 'inside';
+    $(addToAll ? 'img' : 'img.fancybox').each(function () {
+        var $this = $(this);
+        var title = $this.attr('title');
+
+        var src = $this.attr('data-big') || $this.attr('src');
+        var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', "");
+        $this.wrap(a);
+
+    });
+
+    if (gallery)
+        $('a.fancybox').attr('rel', 'fancyboxgallery');
+
+    $('a.fancybox').fancybox({
+
+
+        showCloseButton: false,
+        titlePosition: 'outside'
+    });
+};
 
 

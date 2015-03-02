@@ -22,9 +22,11 @@
 		<!-- wordpress footer -->
 		<?php wp_footer(); ?>
 		<!-- /wordpress footer -->
-		<?php if(!is_page('4')) { ?>
+		<?php if(!is_page('bil') && !is_page('4')) { ?>
+
 		<script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 		<?php } ?>
+
 	</body>
 </html>

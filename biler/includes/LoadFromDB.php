@@ -1,11 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-$servername = "localhost";
-$username = "colin";
-$password = "bobbob";
-
-
-
+include('dbConnect.php');
+$connection = db_connect();
 // Do whatever you want with the $uid
 require_once( '../../../../wp-load.php' );
 get_currentuserinfo();
@@ -14,20 +10,9 @@ $emo = $current_user->ID;
 $firstName = $current_user->user_firstname ;
 $LastName =$current_user->user_lastname ;
 $result="";
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-
-}
-
-$conn = new mysqli($servername, $username, $password,"deleleasing_dk_db");
-mysqli_set_charset($conn,'utf8');
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
 
 
-}
+
 
 global $current_user;
 
@@ -42,7 +27,7 @@ if($user_role=='subscriber' ) {
 From deleleasing_dk_db.wp_posts,deleleasing_dk_db.wp_postmeta
 WHERE deleleasing_dk_db.wp_posts.post_author =".  $emo . "  and deleleasing_dk_db.wp_posts.ID =deleleasing_dk_db.wp_postmeta.post_id and deleleasing_dk_db.wp_postmeta.meta_key= 'cardetails'" ;
 
-    $result = $conn->query($sql);
+    $result = $connection->query($sql);
 
 
 }
@@ -50,7 +35,7 @@ if($user_role=='administrator') {
     $sql = "SELECT deleleasing_dk_db.wp_posts.ID,deleleasing_dk_db.wp_posts.post_author,deleleasing_dk_db.wp_postmeta.meta_value,deleleasing_dk_db.wp_postmeta.meta_key,deleleasing_dk_db.wp_users.display_name
 From deleleasing_dk_db.wp_posts,deleleasing_dk_db.wp_postmeta,deleleasing_dk_db.wp_users
 WHERE  deleleasing_dk_db.wp_users.ID=deleleasing_dk_db.wp_posts.post_author and deleleasing_dk_db.wp_posts.ID =deleleasing_dk_db.wp_postmeta.post_id and  deleleasing_dk_db.wp_postmeta.meta_key= 'cardetails'";
-    $result = $conn->query($sql);
+    $result = $connection->query($sql);
 }
 
 
@@ -66,7 +51,8 @@ if ($result->num_rows > 0) {
         $elementToBeDeleted = $row['ID'];
         $postAuthor = $row['display_name'];
 
-
+        $DeleteArray= array($elementToBeDeleted, $temp[21], $temp[22], $temp[23],$temp[24]);
+        $DeleteArray = json_encode($DeleteArray);
 
         echo "<html>
 
@@ -80,9 +66,9 @@ if ($result->num_rows > 0) {
 
 
       <td>$temp[1]</td>
-        <td>$temp[15]</td>
-        <td>$postAuthor</td><td><button class = 'myButton-custom' type = 'button'  onclick='test1($elementToBeDeleted);$(".'"#html"'.").click();'>edit</button></td>
-        <td><button class = 'myButton-custom' type = 'button'  onclick='test2($elementToBeDeleted)'>delete</button> <input type='checkbox' name= checkboxDelete id = '$elementToBeDeleted' value='delete' > delete<br></td>
+        <td>$temp[20]</td>
+        <td>$postAuthor</td><td><button class = 'myButton-custom' type = 'button'  onclick='getbyid($elementToBeDeleted);$(".'"#html"'.").click();'>edit</button></td>
+        <td><button class = 'myButton-custom' type = 'button'  onclick='deletebyid($DeleteArray)'>delete</button> <input type='checkbox' name= checkboxDelete id = '$DeleteArray' value='delete' > delete<br></td>
 
 
 
@@ -99,4 +85,4 @@ if ($result->num_rows > 0) {
 
 }
 
-$conn->close();
+$connection->close();

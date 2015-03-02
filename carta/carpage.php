@@ -12,10 +12,25 @@
 <link type="text/css" href="../wp-content/themes/carta/css/style.css" rel="stylesheet"/>
 <link type="text/css" href="../wp-content/themes/carta/css/bootstrap.min.css" rel="stylesheet"/>
 <script type="text/javascript" src="../wp-content/themes/carta/js/tabs_old.js"></script>
-<script type="text/javascript" src="../wp-content/themes/carta/js/jquery.min.js"></script>
-
 <script type="text/javascript" src="../wp-content/themes/carta/js/script.js"></script>
 
+<script type="text/javascript" src="../wp-content/themes/carta/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../wp-content/themes/carta/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../wp-content/themes/carta/js/jquery.fancybox-1.3.4.pack.min.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="../wp-content/themes/carta/js/jquery.fancybox-1.3.4.css" />
+<style type="text/css">
+    a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+    }
+    a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
+    }
+</style>
 
 <meta http-equiv="Content-Type" tab-content="text/html; charset=UTF-8">
 <title>Tabs</title>
@@ -30,11 +45,12 @@
                 <span class="pull-right">
                 <div class="menu_simple">
                     <ul>
+
                         <li>
-                            <a href="#" type="button"  onclick="myFunctionGet()" style="font-size: 12px; color: white; text-align:right;">Nye Biller </a><br/>
+                            <a href="#" type="button"  onclick="myFunctionGet()" style="font-size: 12px; color: white; text-align:right;">NYE BILER </a><br/>
                         </li>
                         <li>
-                            <a href="#" type="button"  onclick="myFunctionGet()" style="font-size: 12px; color: white; text-align:right;">Brugte Biller </a><br/>
+                            <a href="#" type="button"  onclick="myFunctionGet()" style="font-size: 12px; color: white; text-align:right;">BRUGTE BILER </a><br/>
                         </li>
                         <li>
 
@@ -66,33 +82,34 @@
         </div>
         <div class="col-md-5 column">
             <div id="gallery">
-                <p class="head-lines">Audi A3 1.9 TDI<br/>
+                <p class="head-lines" id="bp_title">Audi A3 1.9 TDI<br/>
                     Sportpack DPF Attraction</p>
 
                 <div id="bigimages">
+
                     <div id="normal1" class=".img-responsive">
-                        <img id="image11" src="../wp-content/plugins/biler/test/white.png" alt=""/>
+                        <img id="image11" class="fancybox" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/>
                     </div>
 
                     <div id="normal2">
-                        <img id="image12" src="../wp-content/plugins/biler/test/white.png" alt=""/>
+                        <img id="image12" class="fancybox" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/>
                     </div>
 
                     <div id="normal3">
-                        <img id="image13" src="../wp-content/plugins/biler/test/white.png" alt=""/>
+                        <img id="image13" class="fancybox" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/>
                     </div>
 
                     <div id="normal4">
-                        <img id="image14"  src="../wp-content/plugins/biler/test/white.png" alt=""/>
+                        <img id="image14"  class="fancybox" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/>
                     </div>
 
 
                 </div>
                 <div id="thumbs">
-                    <a href="javascript: changeImage(1);"><img id="image1" src="../wp-content/plugins/biler/test/white.png" alt=""/></a>
-                    <a href="javascript: changeImage(2);"><img id="image2" src="../wp-content/plugins/biler/test/white.png" alt=""/></a>
-                    <a href="javascript: changeImage(3);"><img id="image3" src="../wp-content/plugins/biler/test/white.png" alt=""/></a>
-                    <a href="javascript: changeImage(4);"><img id="image4" src="../wp-content/plugins/biler/test/white.png" alt=""/></a>
+                    <a href="javascript: changeImage(1);"><img id="image1" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/></a>
+                    <a href="javascript: changeImage(2);"><img id="image2" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/></a>
+                    <a href="javascript: changeImage(3);"><img id="image3" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/></a>
+                    <a href="javascript: changeImage(4);"><img id="image4" src="../wp-content/plugins/biler/includes/test/white.png" alt=""/></a>
                 </div>
                 <table class="content-table" style="width:100%">
                     <tr>
@@ -189,11 +206,11 @@
                                         <td>Ydelse pr. mdr.</td>
                                         <td class="bp_number"><span>Erherv</span>kr. <b
                                                 style="color:#203742; font-weight: bold;"
-                                                id="bp_monthly-payment-business">4.874</b>,-
+                                                id="bp_monthly-payment-business">4.874</b>,-<span>Ekskl. moms</span>
                                         </td>
                                         <td class="bp_number"><span>Privat	</span>kr. <b
                                                 style="color:#203742; font-weight: bold;"
-                                                id="bp_monthly-payment-private">1.523</b>,-
+                                                id="bp_monthly-payment-private">1.523</b>,-<span>Inkl. moms</span>
                                         </td>
                                     </tr>
 
@@ -219,10 +236,10 @@
                                     <tr>
                                         <td>Besparelse</td>
                                         <td class="bp_number">kr. <b id="bp_savings-business"
-                                                                     style="color:#203742; font-weight: bold;">99.353</b>,-
+                                                                     style="color:#203742; font-weight: bold;">99.353</b>,-<span>Ekskl. moms</span>
                                         </td>
                                         <td class="bp_number">kr. <b id="bp_savings-private"
-                                                                     style="color:#203742; font-weight: bold;">91.191</b>,-
+                                                                     style="color:#203742; font-weight: bold;">91.191</b>,-<span>Inkl. moms</span>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -254,7 +271,7 @@
                                 <table style="text-align:right;">
                                     <thead>
 
-                                    <h2 id="permonth" style="=text-align:center; padding-left:80px; padding-top:15px;">2.189
+                                    <h2 id="Ydelse_flex" style="=text-align:center; padding-left:80px; padding-top:15px;">2.189
                                         kr./måned</h2>
                                     <span style=color:#E1E8F0;padding-left:150px;">ex. moms</span>
 
@@ -262,9 +279,9 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td class="bp_number">Ydelse</td>
-                                        <td id="ydelse" class="custom-tds">kr. 46 000,-
-                                            <span style="color:rgba(65, 31, 45, 0.32)">Ex. moms</span>
+                                        <td class="bp_number">1. Ydelse.</td>
+                                        <td id="1_ydelse_flex" class="custom-tds">kr. 46 000,-
+                                            <span style="">Ex. moms</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -279,7 +296,7 @@
                                     </tr>
                                     <tr>
                                         <td class="bp_number">Beskatningsgrundlag</td>
-                                        <td id="beskat" class="custom-tds">Kr. 208 227 ,-
+                                        <td id="beskatningsgrundlag_flex" class="custom-tds">Kr. 208 227 ,-
                                             <span style="color:rgba(65, 31, 45, 0.32)">(anslået)</span>
                                         </td>
                                     </tr>
@@ -309,15 +326,13 @@
 <script>
 
 
-
-
     function myFunctionGet(){
 
 
 
 
 
-        url = "http://deleleasing.dk/biler/";
+        url = "http://localhost:8080/biler/";
 
         window.open(url,'_self');
     }
@@ -326,5 +341,7 @@
 
 
 
+
+    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
 <?php get_footer(); ?>

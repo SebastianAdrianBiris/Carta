@@ -1,19 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "colin";
-$password = "bobbob";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password,"deleleasing_dk_db");
-mysqli_set_charset($conn,'utf8');
-
+include('includes/dbConnect.php');
+$connection = db_connect();
 $data = json_decode($_POST['data']);
 $type=$data->type ;
 $testnum=$data->page;
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
+
 
 
 
@@ -24,7 +17,7 @@ if ($conn->connect_error) {
 
 
 //$sql = "SELECT meta_value, post_id FROM wp_postmeta WHERE meta_key='cardetails' ";
-$query = mysqli_query($conn, $sql1);
+$query = mysqli_query($connection, $sql1);
 $row = mysqli_fetch_row($query);
 //row count
 $rows = $row[0];
@@ -57,7 +50,7 @@ $limit = 'LIMIT ' . ($testnum - 1) * $page_rows . ',' . $page_rows;
 
 
 
-$query = mysqli_query($conn, $sql);
+$query = mysqli_query($connection, $sql);
 
 $textline1 = "Cars (<b>$rows</b>)";
 $textline2 = "Page <b>$testnum</b> of <b>$last</b>";
@@ -97,21 +90,29 @@ while ($row = mysqli_fetch_array($query, MYSQL_ASSOC)) {
     $cardetails = unserialize($row["meta_value"]);
     echo '<div class="img">';
 
-    echo "<a  type='button'  onclick='myFunctionGet($postid)' target='_blank'  ><img   src='" . '../wp-content/plugins/biler/includes/test/' . $cardetails[16] . "' width='130' height='90'/></a>";
+    echo "<a  type='button'  onclick='myFunctionGet($postid)' target='_blank'  ><img   src='" . '../wp-content/plugins/biler/includes/test/' . $cardetails[21] . "' width='216' height='150'/></a>";
+    echo '<div class="desc">';
     echo '<div class="desc">';
     echo '<p>'.$cardetails[1].'</p>';
-    echo '<p class="price">Fra '.$cardetails[11].' kr/md</p>';
+    if($cardetails[11]!=null) {
+        echo '<p class="price" style="text-align: center" >Fra ' . $cardetails[11] . ' kr./md.</p>';
+    }elseif($cardetails[11]!=null){
+        echo '<p class="price" style="text-align: center">Fra ' . $cardetails[15] . ' kr./md.</p>';
+    }else{
+        echo '<p class="price" style="text-align: center">Fra ' . 0 . ' kr./md.</p>';
+    }
     echo '</div>';
     echo '</div>';
 }
+
 echo '</div>';
-echo '<div class="img" style="background-color:transparent; box-shadow:none; border:none;">';
 
 
-echo '<div class="desc">';
+
+echo '<div class="paginationctrls" style="float: left ">';
 echo '<p style="text-align:left">'.$paginationCtrls.'</p>';
 echo '</div>';
-echo '</div>';
-mysqli_close($conn);
+
+mysqli_close($connection);
 
 ?>

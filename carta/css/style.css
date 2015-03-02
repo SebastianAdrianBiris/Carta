@@ -1690,7 +1690,7 @@ p.tabnav a
 }
 
 #tabs > ul > li:hover{
-    background: #FFFFFF; /* old browsers */
+    background: #B2C2CC; /* old browsers */
 
     cursor:pointer;
     color: #333;
@@ -1811,9 +1811,9 @@ div.img:hover img {
 }
 
 div.desc {
+    width:100%;
     text-align: center;
     font-weight: normal;
-    width: 120px;
     margin: 5px;
     color:black;
 
@@ -2002,7 +2002,9 @@ table td span {
 #bp_car-shared-leasing-slider-description {
 
 }
-
+#bp_description{
+    
+}
 #bp_car-shared-leasing-slider
 {
     width:35%;
